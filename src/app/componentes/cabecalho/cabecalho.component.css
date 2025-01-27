@@ -1,0 +1,22 @@
+.cabecalho{
+  background-image: url("../../../assets/imagens/fundo-cabecalho.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.logo{
+  img{
+    width: 200px;
+  }
+  p{
+    font-size: 24px;
+    color: #6BD1FF;
+
+    width: 400px;
+  }
+}
+
+.imagem{
+  width: 510px;
+}
