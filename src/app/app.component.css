@@ -1,0 +1,10 @@
+main {
+  background: url("../assets/imagens/background-completo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+  h2{
+    text-align: center;
+    padding-top: 16px;
+  }
+}

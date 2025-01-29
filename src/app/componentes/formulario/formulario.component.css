@@ -1,3 +1,7 @@
+section{
+  padding: 32px;
+}
+
 .formulario{
   display: flex;
   margin-top: 24px;
@@ -33,6 +37,7 @@
     flex-direction: row;
     gap: 3%;
     color: #292828;
+    flex-wrap: wrap;
 
   }
 
@@ -97,7 +102,7 @@
   gap: 12px;
 }
 
-.card_1, .card_2, .card_3{
+.modelo1, .modelo2, .modelo3{
   background-color: #fff;
   padding: 12px;
   display: flex;
@@ -110,14 +115,14 @@
   }
 }
 
-.card_1{
+.modelo1{
    box-shadow: 12px 12px 0px #154580;
 }
 
-.card_2{
+.modelo2{
   box-shadow: 12px 12px 0px #6BD1FF;
 }
 
-.card_3{
+.modelo3{
   box-shadow: 12px 12px 0px #84EEC1;
 }

@@ -1,0 +1,74 @@
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: transparent;
+  padding: 32px;
+  .mural__header{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .mural__main{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+.card__container{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__text{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card_1, .card_2, .card_3{
+  background-color: #fff;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 277px;
+  height: 220px;
+  img{
+    width: fit-content;
+  }
+}
+
+.card_1{
+   box-shadow: 12px 12px 0px #154580;
+}
+
+.card_2{
+  box-shadow: 12px 12px 0px #6BD1FF;
+}
+
+.card_3{
+  box-shadow: 12px 12px 0px #84EEC1;
+}
+
+ .button{
+      width: 300px;
+      height: 70px;
+      font-size: 20px;
+      background-color: #154580;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .sem-pensamentos{
+      color: #154580;
+      font-weight: 700;
+      font-size: 28px;
+    }

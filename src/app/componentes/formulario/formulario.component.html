@@ -1,73 +1,76 @@
-<form class="formulario" action="">
-  <div class="pensamento">
-    <label class="textos">Pensamento</label>
-    <textarea class="pensamento" placeholder="Digite seu pensamento" type="text"></textarea>
-  </div>
-  <div class="fonte">
-    <label class="textos">Autor(a) ou Fonte</label>
-    <textarea class="fonte" placeholder="Insira o nome do(a) autor(a) ou fonte" type="text"></textarea>
-  </div>
-  <fieldset class="modelo">
-    <label class="textos">Selecione o modelo do card:</label>
-    <div class="opcoes">
-        <div class="opcao">
-          <div class="opcao__modelo">
-            <input name="modelo" value="modelo-1" class="tipo__modelo" type="radio">
-            <label for="modelo-1">Modelo 1</label>
-          </div>
-          <div class="card__container">
-            <p>Prévia:</p>
-            <div class="card_1">
-              <img src="../../../assets/imagens/modelo1.png" alt="modelo azul-escuro">
-              <div class="card__text">
-                <p class="ff-roboto-mono">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <h3>Autora da Silva Sauro</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="opcao">
-          <div class="opcao__modelo">
-            <input name="modelo" value="modelo-2" class="tipo__modelo" type="radio">
-            <label for="modelo-2">Modelo 2</label>
-          </div>
-          <div class="card__container">
-            <p>Prévia:</p>
-            <div class="card_2">
-              <img src="../../../assets/imagens/modelo2.png" alt="modelo azul-escuro">
-              <div class="card__text">
-                <p class="ff-roboto-mono">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <h3>Autora da Silva Sauro</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="opcao">
-          <div class="opcao__modelo">
-            <input name="modelo" value="modelo-3" class="tipo__modelo" type="radio">
-            <label for="modelo-3">Modelo 3</label>
-          </div>
-            <div class="card__container">
-            <p>Prévia:</p>
-            <div class="card_3">
-              <img src="../../../assets/imagens/modelo3.png" alt="modelo azul-escuro">
-              <div class="card__text">
-                <p class="ff-roboto-mono">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <h3>Autora da Silva Sauro</h3>
-              </div>
-            </div>
-          </div>
-        </div>
+<section class="ff-inter">
+  <h2>Adicione um novo pensamento:</h2>
+  <form class="formulario ff-inter" action="">
+    <div class="pensamento">
+      <label class="textos">Pensamento</label>
+      <textarea class="pensamento" id="pensamento" [(ngModel)]="pensamento.conteudo"  name="pensamento" placeholder="Digite seu pensamento" type="textarea"></textarea>
     </div>
-  </fieldset>
-  <div class="buttons">
-    <button class="button">Salvar</button>
-    <button class="button">Cancelar</button>
-  </div>
-</form>
+    <div class="fonte">
+      <label class="textos">Autor(a) ou Fonte</label>
+      <textarea class="fonte" name="fonte" [(ngModel)]="pensamento.autoria" placeholder="Insira o nome do(a) autor(a) ou fonte" type="text"></textarea>
+    </div>
+    <fieldset class="modelo">
+      <label class="textos">Selecione o modelo do card:</label>
+      <div class="opcoes">
+          <div class="opcao">
+            <div class="opcao__modelo">
+              <input name="modelo" value="modelo-1" class="tipo__modelo" type="radio">
+              <label for="modelo-1">Modelo 1</label>
+            </div>
+            <div class="card__container">
+              <p>Prévia:</p>
+              <div class="modelo1">
+                <img src="../../../assets/imagens/modelo1.png" alt="modelo azul-escuro">
+                <div class="card__text">
+                  <p class="ff-roboto-mono">
+                    {{ pensamento.conteudo }}
+                  </p>
+                  <h3>{{ pensamento.autoria }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="opcao">
+            <div class="opcao__modelo">
+              <input name="modelo" value="modelo-2" class="tipo__modelo" type="radio">
+              <label for="modelo-2">Modelo 2</label>
+            </div>
+            <div class="card__container">
+              <p>Prévia:</p>
+              <div class="modelo2">
+                <img src="../../../assets/imagens/modelo2.png" alt="modelo azul-escuro">
+                <div class="card__text">
+                  <p class="ff-roboto-mono">
+                    {{ pensamento.conteudo }}
+                  </p>
+                  <h3>{{ pensamento.autoria }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="opcao">
+            <div class="opcao__modelo">
+              <input name="modelo" value="modelo-3" class="tipo__modelo" type="radio">
+              <label for="modelo-3">Modelo 3</label>
+            </div>
+              <div class="card__container">
+              <p>Prévia:</p>
+              <div class="modelo3">
+                <img src="../../../assets/imagens/modelo3.png" alt="modelo azul-escuro">
+                <div class="card__text">
+                  <p class="ff-roboto-mono">
+                   {{ pensamento.conteudo }}
+                  </p>
+                  <h3>{{ pensamento.autoria }}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </fieldset>
+    <div class="buttons">
+      <button (click)="criarPensamento()"   class="button">Salvar</button>
+      <button (click)="cancelarPensamento()" routerLink="/listarPensamento" class="button">Cancelar</button>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,19 @@
+<div class=".card__container  ff-roboto-mono ">
+  <div class="{{ pensamento.modelo }} " [ngClass]="larguraPensamento()">
+      <img src="../../../assets/imagens/{{pensamento.modelo}}.png" alt="modelo azul-escuro">
+          <div class="card__text">
+            <p class="ff-roboto-mono">
+              {{ pensamento.conteudo }}
+            </p>
+          <h3>{{ pensamento.autoria }}</h3>
+        </div>
+        <div class="acoes">
+            <button class="acao">
+                <img src="../../../assets/imagens/icone-editar.png" alt="">
+            </button>
+              <button class="acao">
+                <img src="../../../assets/imagens/icone-excluir.png" alt="">
+            </button>
+        </div>
+    </div>
+</div>

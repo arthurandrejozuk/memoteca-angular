@@ -1,0 +1,18 @@
+<section class="container ff-inter">
+  <div class="mural__header">
+    <h2>Meu Mural</h2>
+    <button routerLink="criarPensamento" class="button">
+        Adicionar um pensamento
+    </button>
+  </div>
+  <div  class="mural__main" *ngIf="listaPensamentos.length > 0, else semPensamentos">
+    <div *ngFor="let pensamento of listaPensamentos">
+      <app-card [pensamento]="pensamento"></app-card>
+    </div>
+  </div>
+</section>
+<ng-template #semPensamentos>
+  <div class="ff-inter sem-pensamentos">
+    <p>Ainda não há pensamentos cadastrados</p>
+  </div>
+</ng-template>

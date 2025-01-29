@@ -1,0 +1,22 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo":"Que bom que vc veio",
+      "autoria":"Josney",
+      "modelo":"modelo1"
+    },
+     {
+      "id": 2,
+      "conteudo":"Grande dia",
+      "autoria":"Arnold",
+      "modelo":"modelo2"
+    },
+     {
+      "id": 3,
+      "conteudo":"Nada é tão ruim que não possa piorar",
+      "autoria":"Cleber",
+      "modelo":"modelo3"
+    }
+  ]
+}
