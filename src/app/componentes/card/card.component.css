@@ -57,3 +57,11 @@
 .modelo3{
   box-shadow: 12px 12px 0px #84EEC1;
 }
+
+.none{
+  display: none;
+}
+
+.show{
+  display: block;
+}

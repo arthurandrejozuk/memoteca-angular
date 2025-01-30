@@ -1,12 +1,6 @@
 {
   "pensamentos": [
     {
-      "id": 1,
-      "conteudo": "Que bom que vc veio",
-      "autoria": "Josney",
-      "modelo": "modelo1"
-    },
-    {
       "id": 2,
       "conteudo": "Grande dia",
       "autoria": "Arnold",
@@ -21,7 +15,7 @@
     {
       "conteudo": "olá, eu sou Goku",
       "autoria": "Goku",
-      "modelo": "",
+      "modelo": "modelo1",
       "id": 4
     }
   ]

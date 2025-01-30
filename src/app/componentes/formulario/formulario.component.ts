@@ -19,10 +19,12 @@ export class FormularioComponent {
 
     conteudo: "",
     autoria: "",
-    modelo: ""
+    modelo: "modelo1"
   }
 
   constructor(private service: PensamentoService) {
+
+
 
   }
   ngOnInit(): void {

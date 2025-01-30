@@ -1,12 +1,14 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pensamentos } from '../../pensamentos/pensamentos';
+import { ModalComponent } from "../modal/modal.component";
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -18,6 +20,7 @@ export class CardComponent implements OnInit {
     autoria: "Arthur",
     modelo: "modelo3"
   }
+
 
 
   ngOnInit(): void {
