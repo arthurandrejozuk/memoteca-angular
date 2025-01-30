@@ -1,6 +1,10 @@
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Pensamentos } from '../../pensamentos/pensamentos';
+import { PensamentoService } from '../../pensamentos/pensamento.service';
+
 
 
 @Component({
@@ -11,14 +15,14 @@ import { RouterModule } from '@angular/router';
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
-  pensamento = {
-    id: "1",
-    conteudo: "aprendendo Angular",
-    autoria: "Dev",
+  pensamento: Pensamentos = {
+
+    conteudo: "",
+    autoria: "",
     modelo: ""
   }
 
-  constructor() {
+  constructor(private service: PensamentoService) {
 
   }
   ngOnInit(): void {
@@ -26,7 +30,8 @@ export class FormularioComponent {
   }
 
   criarPensamento() {
-    alert("Novo pensamento criado")
+    console.log("Algo ocorreu")
+    this.service.criar(this.pensamento).subscribe();
   }
 
   cancelarPensamento() {

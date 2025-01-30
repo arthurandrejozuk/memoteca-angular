@@ -1,5 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { Pensamentos } from '../../pensamentos/pensamentos';
+
 
 @Component({
   selector: 'app-card',
@@ -10,7 +12,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() pensamento = {
+  @Input() pensamento: Pensamentos = {
+    id: 0,
     conteudo: "Bem Bacana",
     autoria: "Arthur",
     modelo: "modelo3"
@@ -28,7 +31,5 @@ export class CardComponent implements OnInit {
         return "card__p"
       }
   }
-
-
 
 }

@@ -4,20 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { MuralComponent } from './componentes/mural/mural.component';
 
+
+
 export const routes: Routes = [
-  {
-    path: "",
-    redirectTo: "listarPensamento",
-    pathMatch:"full"
-  },
-  {
-    path: "criarPensamento",
-    component: FormularioComponent
-  },
-  {
-    path: "listarPensamento",
-    component: MuralComponent
-  }
+  { path: '', component: MuralComponent}, // Redireciona para a home
+
+  { path: 'criarPensamento', component: FormularioComponent }, // 🔥 Rota sem "listarPensamento"
 ];
 
 @NgModule({
