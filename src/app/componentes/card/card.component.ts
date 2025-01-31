@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pensamentos } from '../../pensamentos/pensamentos';
-import { ModalComponent } from "../modal/modal.component";
+
 import { RouterLink } from '@angular/router';
 
 
@@ -14,7 +14,9 @@ import { RouterLink } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
-  @Input() pensamento: Pensamentos = {
+// Permite criar um template e modificar, inserindo um novo pensamento
+  @Input()
+  pensamento: Pensamentos = {
     id: 0,
     conteudo: "Bem Bacana",
     autoria: "Arthur",

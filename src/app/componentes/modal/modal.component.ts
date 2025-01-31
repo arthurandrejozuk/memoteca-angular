@@ -35,10 +35,10 @@ export class ModalComponent implements OnInit {
     autoria: '',
     modelo: ''
   }
-
-
+  //configura um método que será inserido no html para deletar o pensamento
   excluirPensamento() {
     if (this.pensamento.id) {
+      // subscribe permite esperar ouvir o chamado e realizar uma açãos
       this.service.remover(this.pensamento.id).subscribe(() => {
         this.router.navigate(["/"])
       })

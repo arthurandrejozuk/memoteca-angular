@@ -16,7 +16,6 @@ import { PensamentoService } from '../../pensamentos/pensamento.service';
 })
 export class FormularioComponent {
   pensamento: Pensamentos = {
-
     conteudo: "",
     autoria: "",
     modelo: "modelo1"
@@ -31,9 +30,12 @@ export class FormularioComponent {
 
   }
 
+  // cria pensamento e notifica que foi criado
   criarPensamento() {
     console.log("Algo ocorreu")
-    this.service.criar(this.pensamento).subscribe();
+    this.service.criar(this.pensamento).subscribe(() => {
+      alert("Pensamento criado")
+    });
   }
 
   cancelarPensamento() {

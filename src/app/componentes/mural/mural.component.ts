@@ -22,7 +22,7 @@ export class MuralComponent implements OnInit {
   constructor(private service: PensamentoService) {
 
   }
-
+  // busca o servico para pega o pensamento já no carregamento do componente
   ngOnInit(): void{
     this.service.listar().subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
