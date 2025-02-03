@@ -1,6 +1,14 @@
 <section class="container ff-inter">
   <div class="mural__header">
-    <h2>Meu Mural</h2>
+    <h2>Meu mural</h2>
+    <div class="container-busca">
+      <div class="busca">
+        <input (keyup)="buscaPensamento()" [(ngModel)]="pensamentoConteudo" class="input-busca" autofocus placeholder="Busque um pensamento" type="search">
+        <button  class="button-busca">
+            Procurar
+        </button>
+      </div>
+    </div>
     <button routerLink="criarPensamento" class="button">
         Adicionar um pensamento
     </button>
@@ -14,7 +22,6 @@
   [haMaisPensamentos]="haMaisPensamentos"
   (click)="carregarMaisPensamentos()"
   >
-
   </app-botao-carregar-mais>
 </section>
 <ng-template #semPensamentos>

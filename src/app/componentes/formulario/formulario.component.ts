@@ -32,6 +32,7 @@ export class FormularioComponent {
 
   formulario!: FormGroup;
 
+
   ngOnInit(): void {
 
     this.formulario = this.formBuilder.group({
