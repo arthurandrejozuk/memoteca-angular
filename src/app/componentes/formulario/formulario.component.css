@@ -21,6 +21,11 @@ section{
 
   }
 
+  .mensagem__erro{
+    color: red;
+
+  }
+
   .modelo{
     display: flex;
     flex-direction: column;

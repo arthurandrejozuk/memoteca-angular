@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormularioComponent } from '../componentes/formulario/formulario.component';
+import { FormularioComponent } from '../formulario/formulario.component';
 
 @Component({
   selector: 'app-principal',

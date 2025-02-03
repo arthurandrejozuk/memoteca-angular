@@ -25,6 +25,7 @@
   flex-direction: column;
   gap: 32px;
   height: auto;
+  margin: 16px;
   img{
     width: fit-content;
   }

@@ -1,20 +1,27 @@
 <section class="ff-inter">
   <h2>Adicione um novo pensamento:</h2>
-  <form class="formulario ff-inter" action="">
+  <form [formGroup]="formulario" class="formulario ff-inter" action="">
     <div class="pensamento">
       <label class="textos">Pensamento</label>
-      <textarea class="pensamento" id="pensamento" [(ngModel)]="pensamento.conteudo"  name="pensamento" placeholder="Digite seu pensamento" type="textarea"></textarea>
+      <textarea class="pensamento" id="pensamento" formControlName="conteudo" placeholder="Digite seu pensamento" type="textarea"></textarea>
+      <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors?.['required'] && formulario.get('conteudo')?.touched" >
+          Pensamento é obrigatório!
+      </div>
     </div>
     <div class="fonte">
       <label class="textos">Autor(a) ou Fonte</label>
-      <textarea class="fonte" name="fonte" [(ngModel)]="pensamento.autoria" placeholder="Insira o nome do(a) autor(a) ou fonte" type="text"></textarea>
+      <textarea class="fonte" formControlName="autoria" placeholder="Insira o nome do(a) autor(a) ou fonte" type="text"></textarea>
+      <div class="mensagem__erro"
+      *ngIf="formulario.get('autoria')?.errors?.['minlength'] && formulario.get('autoria')?.touched">
+          Autoria precisa ter no mínimo 3 caracteres!
+      </div>
     </div>
     <fieldset class="modelo">
       <label class="textos">Selecione o modelo do card:</label>
       <div class="opcoes">
           <div class="opcao">
             <div class="opcao__modelo">
-              <input name="modelo" value="modelo1" class="tipo__modelo" type="radio">
+              <input formControlName="modelo" value="modelo1" class="tipo__modelo" type="radio">
               <label for="modelo1">Modelo 1</label>
             </div>
             <div class="card__container">
@@ -23,16 +30,16 @@
                 <img src="../../../assets/imagens/modelo1.png" alt="modelo azul-escuro">
                 <div class="card__text">
                   <p class="ff-roboto-mono">
-                    {{ pensamento.conteudo }}
+                     {{ formulario.get("conteudo")?.value }}
                   </p>
-                  <h3>{{ pensamento.autoria }}</h3>
+                  <h3>{{ formulario.get("autoria")?.value }}</h3>
                 </div>
               </div>
             </div>
           </div>
           <div class="opcao">
             <div class="opcao__modelo">
-              <input name="modelo" value="modelo2" class="tipo__modelo" type="radio">
+              <input formControlName="modelo" value="modelo2" class="tipo__modelo" type="radio">
               <label for="modelo2">Modelo 2</label>
             </div>
             <div class="card__container">
@@ -41,16 +48,16 @@
                 <img src="../../../assets/imagens/modelo2.png" alt="modelo azul-escuro">
                 <div class="card__text">
                   <p class="ff-roboto-mono">
-                    {{ pensamento.conteudo }}
+                    {{ formulario.get("conteudo")?.value }}
                   </p>
-                  <h3>{{ pensamento.autoria }}</h3>
+                  <h3>{{ formulario.get("autoria")?.value }}</h3>
                 </div>
               </div>
             </div>
           </div>
           <div class="opcao">
             <div class="opcao__modelo">
-              <input name="modelo" value="modelo3" class="tipo__modelo" type="radio">
+              <input formControlName="modelo" value="modelo3" class="tipo__modelo" type="radio">
               <label for="modelo3">Modelo 3</label>
             </div>
               <div class="card__container">
@@ -59,9 +66,9 @@
                 <img src="../../../assets/imagens/modelo3.png" alt="modelo azul-escuro">
                 <div class="card__text">
                   <p class="ff-roboto-mono">
-                   {{ pensamento.conteudo }}
+                  {{ formulario.get("conteudo")?.value }}
                   </p>
-                  <h3>{{ pensamento.autoria }}</h3>
+                  <h3>{{ formulario.get("autoria")?.value }}</h3>
                 </div>
               </div>
             </div>
@@ -69,7 +76,7 @@
       </div>
     </fieldset>
     <div class="buttons">
-      <button (click)="editaPensamento()" routerLink   class="button">Salvar</button>
+      <button (click)="editaPensamento()" routerLink  class="button">Editar</button>
       <button (click)="cancelarPensamento()" routerLink="/" class="button">Cancelar</button>
     </div>
   </form>

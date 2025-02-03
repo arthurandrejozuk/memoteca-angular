@@ -73,3 +73,26 @@ h2 {
       width: 1140px;
   }
 }
+
+.button__desabilitado {
+  background: #7A7F87;
+  color: #FFFFFF;
+  width: 200px;
+  height: 51px;
+  padding: 1rem;
+  border: 2px solid #C4C4C4;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+ .button{
+      width: 200px;
+      height: 51px;
+      font-size: 20px;
+      background-color: #154580;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
