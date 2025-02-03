@@ -18,13 +18,13 @@ import { PensamentoService } from '../../pensamentos/pensamento.service';
 export class MuralComponent implements OnInit {
 
   listaPensamentos: Pensamentos[] = []
-
+  paginaAtual: number = 1
   constructor(private service: PensamentoService) {
 
   }
   // busca o servico para pega o pensamento já no carregamento do componente
   ngOnInit(): void{
-    this.service.listar().subscribe((listaPensamentos) => {
+    this.service.listar(this.paginaAtual).subscribe((listaPensamentos) => {
       this.listaPensamentos = listaPensamentos
     })
   }
