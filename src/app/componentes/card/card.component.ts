@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
     favorito: false
   }
 
-// Permite a comunicação com o componente pai
+  // Permite a comunicação com o componente pai
   @Input()
   listaFavoritos: Pensamentos[] = []
 

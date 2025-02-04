@@ -16,6 +16,7 @@ export const routes: Routes = [
   { path: 'editarPensamento/:id', component: EditaCardComponent }
 ];
 
+// Insere os routes
 @NgModule({
   imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule],
