@@ -3,6 +3,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Pensamentos } from '../../pensamentos/pensamentos';
 
 import { RouterLink } from '@angular/router';
+import { PensamentoService } from '../../pensamentos/pensamento.service';
 
 
 @Component({
@@ -14,16 +15,20 @@ import { RouterLink } from '@angular/router';
 })
 export class CardComponent implements OnInit {
 
+
 // Permite criar um template e modificar, inserindo um novo pensamento
   @Input()
   pensamento: Pensamentos = {
     id: 0,
     conteudo: "Bem Bacana",
     autoria: "Arthur",
-    modelo: "modelo3"
+    modelo: "modelo3",
+    favorito: false
   }
 
+  constructor(private service: PensamentoService) {
 
+  }
 
   ngOnInit(): void {
 
@@ -37,4 +42,14 @@ export class CardComponent implements OnInit {
       }
   }
 
+  mudarIconeFavorito() {
+    if (this.pensamento.favorito == false) {
+      return 'inativo'
+    }
+    return 'ativo'
+  }
+
+  atualizarFavoritos() {
+    this.service.mudarFavorito(this.pensamento).subscribe();
+  }
 }

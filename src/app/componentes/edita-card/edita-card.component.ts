@@ -20,7 +20,8 @@ export class EditaCardComponent implements OnInit{
   pensamento: Pensamentos = {
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: '',
+    favorito: false
   }
 
   formulario!: FormGroup
@@ -48,7 +49,8 @@ export class EditaCardComponent implements OnInit{
         Validators.minLength(3),
         Validators.pattern(/(.|\s)*\S(.|\s)*/)
         ])],
-        modelo: ['modelo1']
+      modelo: [this.pensamento.modelo],
+      favorito:  [this.pensamento.favorito]
     })
 
   }
@@ -57,7 +59,7 @@ export class EditaCardComponent implements OnInit{
     console.log("teste")
     const id = this.route.snapshot.paramMap.get('id')
     if (this.formulario.valid && id) {
-     this.service.editar(this.formulario.value, parseInt(id!)).subscribe(() => {
+     this.service.editar(this.formulario.value).subscribe(() => {
         this.router.navigate(["/"])
       })
     }

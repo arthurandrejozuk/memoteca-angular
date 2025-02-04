@@ -33,7 +33,8 @@ export class ModalComponent implements OnInit {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: '',
+    favorito: false
   }
   //configura um método que será inserido no html para deletar o pensamento
   excluirPensamento() {

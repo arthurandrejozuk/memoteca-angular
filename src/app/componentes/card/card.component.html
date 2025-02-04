@@ -8,6 +8,9 @@
           <h3>{{ pensamento.autoria }}</h3>
         </div>
         <div class="acoes">
+            <button (click)="atualizarFavoritos()" class="acao">
+                <img src="../../../assets/imagens/icone-favorito-{{ mudarIconeFavorito() }}.png" alt="icone de coração {{ mudarIconeFavorito() }}">
+            </button>
             <button routerLink="/editarPensamento/{{pensamento.id}}" class="acao">
                 <img src="../../../assets/imagens/icone-editar.png" alt="">
             </button>

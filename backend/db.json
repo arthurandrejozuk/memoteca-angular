@@ -4,48 +4,56 @@
       "id": 2,
       "conteudo": "Grande dia",
       "autoria": "Arnold",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": true
     },
     {
       "id": 3,
       "conteudo": "Nada é tão ruim que não possa piorar",
       "autoria": "Cleber",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "conteudo": "olá, eu sou Goku",
       "autoria": "Goku",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "Um dia haverá glória",
       "autoria": "Arthur",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 7
     },
     {
       "conteudo": "Receita da casa: ...",
       "autoria": "Arnaldo",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 8
     },
     {
       "conteudo": "Olá pessoal",
       "autoria": "Roberto",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 9
     },
     {
       "conteudo": "Que a força esteja com você ",
       "autoria": "Obi-Wan kenobi",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 10
     },
     {
       "conteudo": "Bacana",
       "autoria": "Arthur",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 11
     }
   ]
