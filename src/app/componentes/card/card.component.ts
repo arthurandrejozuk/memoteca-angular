@@ -16,7 +16,7 @@ import { PensamentoService } from '../../pensamentos/pensamento.service';
 export class CardComponent implements OnInit {
 
 
-// Permite criar um template e modificar, inserindo um novo pensamento
+// Permite a comunicação com o componente pai
   @Input()
   pensamento: Pensamentos = {
     id: 0,
@@ -25,6 +25,10 @@ export class CardComponent implements OnInit {
     modelo: "modelo3",
     favorito: false
   }
+
+// Permite a comunicação com o componente pai
+  @Input()
+  listaFavoritos: Pensamentos[] = []
 
   constructor(private service: PensamentoService) {
 
@@ -49,7 +53,11 @@ export class CardComponent implements OnInit {
     return 'ativo'
   }
 
+  // Para recebermos as respostas de mudança da lista de favoritos
+  // é necessario ter uma comunicação entre o componente do mural e do card
   atualizarFavoritos() {
-    this.service.mudarFavorito(this.pensamento).subscribe();
+    this.service.mudarFavorito(this.pensamento).subscribe(() => {
+      this.listaFavoritos.splice(this.listaFavoritos.indexOf(this.pensamento), 1)
+    });
   }
 }

@@ -56,6 +56,11 @@
   box-shadow: 12px 12px 0px #84EEC1;
 }
 
+  .botoes{
+    display: flex;
+    gap: 12px;
+  }
+
  .button{
       width: 300px;
       height: 70px;

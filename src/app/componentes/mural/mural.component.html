@@ -1,6 +1,17 @@
 <section class="container ff-inter">
   <div class="mural__header">
-    <h2>Meu mural</h2>
+    <h2>{{ titulo }}</h2>
+    <div class="botoes">
+      <button (click)="recarregarPagina()" class="button">
+        Meu mural
+      </button>
+      <button (click)="mostrarFavoritos()" class="button">
+        Meus favoritos
+      </button>
+      <button routerLink="criarPensamento" class="button">
+        Adicionar um pensamento
+      </button>
+    </div>
     <div class="container-busca">
       <div class="busca">
         <input (keyup)="buscaPensamento()" [(ngModel)]="pensamentoConteudo" class="input-busca" autofocus placeholder="Busque um pensamento" type="search">
@@ -9,13 +20,13 @@
         </button>
       </div>
     </div>
-    <button routerLink="criarPensamento" class="button">
-        Adicionar um pensamento
-    </button>
   </div>
   <div  class="mural__main" *ngIf="listaPensamentos.length > 0, else semPensamentos">
     <div *ngFor="let pensamento of listaPensamentos">
-      <app-card [pensamento]="pensamento"></app-card>
+      <app-card
+      [pensamento]="pensamento"
+      [listaFavoritos]="listaFavoritos"
+      ></app-card>
     </div>
   </div>
   <app-botao-carregar-mais
